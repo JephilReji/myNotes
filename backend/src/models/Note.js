@@ -1,4 +1,5 @@
  import mongoose from "mongoose"
+ // mongo db provider
 
 // 1st : create schema
 //2nd create model based off the schema
