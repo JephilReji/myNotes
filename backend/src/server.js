@@ -3,7 +3,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDb } from "./config/db.js";
-import rateLimiter from "./middleware/rateLimiter.js";
 import path from"path";
 
 
@@ -23,7 +22,7 @@ if(process.env.NODE_ENV !== "production"){
 }
 
 app.use(express.json()); //middleware (without this cant use json like , {title,content} within {})
-app.use(rateLimiter);
+// rateLimiter removed — requests are no longer rate-limited here
 
 app.use("/api/notes",notesRoutes);
 

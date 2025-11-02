@@ -1,13 +1,3 @@
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-// Create rate limiter that allows 100 requests per 60 seconds
-const rateLimit = new Ratelimit({
-    redis: Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(100, "60 s"),
-});
-
-export default rateLimit;
+// upstash rate limit config removed.
+// This file is kept for history. The app no longer uses Upstash for rate limiting.
+// You can safely delete this file when ready.
